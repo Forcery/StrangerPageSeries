@@ -1,0 +1,199 @@
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  background-color: #596e66;
+  color: #170605;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 95%;
+}
+
+/*LAYOUT STYLING*/
+.container {
+  max-width: 1000px;
+  background-color: #9dccba;
+  margin: 10% auto;
+  padding-right: 40px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+/*HEADER STYLING*/
+header.header-area {
+  padding: 20px 0;
+  color: #597f66;
+  font-weight: Bolder;
+  font-size: 113%;
+}
+
+/*MAIN-BODY-layout STYLING*/
+.content-area {
+  border-top: 2px solid #000f00;
+  border-bottom: solid 2px #0f0000;
+  margin: 0;
+}
+
+/*Setting a space between the paragraphs*/
+.content-area p {
+  padding-bottom: 10px;
+}
+
+/*MAIN-BODY STYLING*/
+main .Main-area {
+  float: left;
+  width: 55%;
+  margin-right: 5px;
+  padding: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.Main-area h2 {
+  text-align: center;
+}
+.Main-area p {
+  text-indent: 4pt;
+  text-align: center justify;
+}
+
+.SideBar-area {
+  float: right;
+  width: 38%;
+  background-color: #ddd7ce;
+  font-size: 0.9rem;
+  padding: 30px;
+  margin-top: 15.77px;
+  margin-bottom: 15.77px;
+  box-sizing: border-box;
+}
+
+.SideBar-area p {
+  text-align: center justify;
+  text-indent: 5px;
+}
+
+.SideBar-area h2 {
+  text-align: center;
+}
+
+/*
+I Can solve or fix the overflow problem when i float elements on CONTENT-AREA using a empty div named "fix" and set the clear property as "both"...
+Or using the "overflow" property set as "auto"...
+or like below:
+*/
+.clearFix:before,
+.clearFix:after {
+  content: '';
+  display: table;
+}
+
+.clearFix:after {
+  clear: both;
+}
+
+.clearFix {
+  zoom: 1;
+}
+
+/*FOOTER STYLING*/
+.footer-area {
+  padding: 38px;
+  text-align: center;
+  font-size: small;
+  color: rgb(215, 245, 170);
+}
+
+/*Let's make it a responsive */
+@media only screen and (max-width: 1035px) {
+  .container {
+    max-width: 100%;
+    margin: 8px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    max-width: 100%;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  /*HEADER STYLING*/
+  header.header-area {
+    padding: 15px 5px;
+    font-size: 100%;
+    text-align: center;
+  }
+
+  /*MAIN-BODY-layout STYLING*/
+  .content-area {
+    border-top: 2px groove #000f00;
+    border-bottom: groove 2px #0f0000;
+  }
+  /*MAIN-BODY STYLING*/
+  main .Main-area {
+    width: 94%;
+  }
+
+  .SideBar-area {
+    width: 70%;
+    margin: 15px 0;
+    padding: 22px;
+    box-sizing: border-box;
+    text-align: center justify-all;
+  }
+
+  .footer-area {
+    padding: 28px;
+    font-size: medium;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  /*HEADER STYLING*/
+  header.header-area {
+    font-size: 85%;
+  }
+  /*MainArea*/
+  .Main-area {
+    max-width: 100%;
+  }
+  .Main-area h2 {
+    font-size: larger;
+    padding: 4px;
+  }
+
+  /*SideBar*/
+  .SideBar-area {
+    width: 100%;
+  }
+
+  .footer-area {
+    font-size: smaller;
+  }
+
+  @media only screen and (max-width: 339px) {
+    /*HEADER STYLING*/
+    header.header-area {
+      font-size: 75%;
+    }
+    /*CONTENTAREA*/
+    .content-area{
+      font-size: 75%;
+    }
+    .Main-area{
+      font-size: 100%;
+    }
+    /*SideBar*/
+    .SideBar-area{
+      font-size: 100%;
+    }
+
+    }
